@@ -1,0 +1,1346 @@
+
+/* 1. Basic website settings */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #101010;
+    color: white;
+}
+
+/* 2. Website header */
+header {
+    background-color: #050505;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #d6b15e;
+}
+
+header h2 {
+    color: #d6b15e;
+    font-size: 32px;
+    letter-spacing: 6px;
+    margin: 0;
+}
+
+header p {
+    margin-bottom: 0;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+/* 3. Navigation menu */
+nav {
+    background-color: #101010;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d6b15e;
+}
+
+/* 4. Main homepage section */
+
+
+/* SAJONZ Premium Hero Section */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 85px 8%;
+    min-height: 580px;
+    text-align: left;
+    background:
+        radial-gradient(ellipse at 80% 45%, #382b12 0%, transparent 45%),
+        linear-gradient(120deg, #050505, #100e09);
+    overflow: hidden;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 0;
+}
+
+#home .small-title {
+    color: #d6b15e;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+#home h1 {
+    color: #ffffff;
+    font-size: clamp(58px, 7vw, 92px);
+    font-weight: 900;
+    letter-spacing: 5px;
+    line-height: 1;
+    margin: 15px 0 22px;
+}
+
+#home h3 {
+    color: #d6b15e;
+    font-size: clamp(22px, 2.5vw, 30px);
+    font-weight: 700;
+    margin: 0 0 18px;
+}
+
+#home p:not(.small-title) {
+    color: #c9c9c9;
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 440px;
+    margin-bottom: 30px;
+}
+
+#home .button {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    padding: 14px 22px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+#home .button:hover {
+    transform: translateY(-3px);
+}
+
+#home .second-button {
+    border: 1px solid #d6b15e;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #d6b15e;
+    border-radius: 5px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* Hero mobile layout */
+@media (max-width: 750px) {
+    #home {
+        flex-direction: column;
+        gap: 35px;
+        padding: 60px 6%;
+        min-height: auto;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    #home h1 {
+        font-size: clamp(48px, 13vw, 72px);
+        letter-spacing: 3px;
+    }
+
+    #home p:not(.small-title) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        max-width: 340px;
+    }
+}
+
+/* 6. Buttons */
+.button {
+    display: inline-block;
+    background-color: #d6b15e;
+    color: #101010;
+    padding: 15px 24px;
+    margin: 5px 5px 5px 0;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+}
+
+.second-button {
+    background-color: transparent;
+    color: #d6b15e;
+    border: 1px solid #d6b15e;
+}
+
+/* 7. Music, About and Contact */
+section:not(#home) {
+    padding: 70px 20px;
+    text-align: center;
+    border-bottom: 1px solid #292929;
+}
+
+section h2 {
+    color: #d6b15e;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+section h3 {
+    font-size: 22px;
+}
+
+section p {
+    max-width: 700px;
+    margin: 15px auto 25px;
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* 8. Website footer */
+footer {
+    background-color: #050505;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid #d6b15e;
+}
+
+footer p {
+    color: #aaaaaa;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* 9. Mobile phone layout */
+@media (max-width: 700px) {
+
+    nav {
+        padding: 12px 5px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+        font-size: 13px;
+    }
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+        padding: 45px 20px;
+        gap: 30px;
+    }
+
+    #home h1 {
+        font-size: 48px;
+        letter-spacing: 5px;
+    }
+
+    #home h3 {
+        font-size: 22px;
+    }
+
+    #home .small-title {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        max-height: 430px;
+    }
+
+    section:not(#home) {
+        padding: 45px 20px;
+    }
+
+    section h2 {
+        font-size: 27px;
+    }
+}
+
+
+/* Sajonz YouTube video cards */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 35px auto 0;
+    text-align: left;
+}
+
+.video-card {
+    display: block;
+    background: #181818;
+    border: 1px solid #383020;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.video-card:hover {
+    border-color: #d6b15e;
+    transform: translateY(-4px);
+}
+
+.video-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.video-card h3 {
+    color: #d6b15e;
+    font-size: 16px;
+    padding: 0 15px;
+    line-height: 1.5;
+}
+
+.video-card p {
+    padding: 0 15px;
+    color: #ddd;
+    font-size: 13px;
+}
+
+/* SAJONZ MUSIC CATALOGUE */
+.music-section {
+    background: #101010;
+    padding: 70px 8%;
+}
+
+.music-heading {
+    text-align: left;
+    max-width: 1100px;
+    margin: 0 auto 35px;
+}
+
+.music-eyebrow {
+    color: #d6b15e;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.music-heading h2 {
+    margin: 10px 0;
+    font-size: 38px;
+}
+
+.music-heading > p:last-child {
+    color: #ccc;
+    line-height: 1.7;
+}
+
+.featured-release {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #1c1c1c, #090909);
+    border: 1px solid #493b20;
+    border-radius: 10px;
+}
+
+.release-info {
+    text-align: left;
+}
+
+.release-label {
+    color: #d6b15e;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.release-info h3 {
+    color: white;
+    font-size: 32px;
+    margin: 18px 0;
+}
+
+.release-info > p:not(.release-label) {
+    color: #ccc;
+    line-height: 1.8;
+    margin: 0 0 25px;
+}
+
+.spotify-player {
+    width: 100%;
+    min-width: 0;
+}
+
+.spotify-player iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border: 0;
+}
+
+/* RESPONSIVE MUSIC CATALOGUE */
+@media (max-width: 700px) {
+    .music-section {
+        padding: 45px 18px;
+    }
+
+    .music-heading {
+        text-align: center;
+    }
+
+    .music-heading h2 {
+        font-size: 29px;
+    }
+
+    .featured-release {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 20px 15px;
+    }
+
+    .release-info {
+        text-align: center;
+    }
+
+    .release-info h3 {
+        font-size: 26px;
+    }
+
+    .spotify-player iframe {
+        height: 352px;
+    }
+}
+
+/* SAJONZ WEBSITE - MOBILE IMPROVEMENTS */
+@media (max-width: 700px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 14px;
+        padding: 15px 10px;
+    }
+
+    nav a {
+        margin: 0;
+        padding: 6px 2px;
+    }
+
+    #home {
+        padding: 40px 18px;
+        gap: 25px;
+    }
+
+    #home h1 {
+        font-size: clamp(38px, 10vw, 48px);
+        letter-spacing: 4px;
+        overflow-wrap: anywhere;
+    }
+
+    #home h3 {
+        font-size: 21px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 13px 16px;
+        margin: 5px 3px;
+        max-width: 100%;
+    }
+
+    section:not(#home) {
+        padding: 45px 16px;
+    }
+
+    section h2 {
+        font-size: 27px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .video-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .video-card img {
+        width: 100%;
+    }
+
+    .music-heading h2 {
+        font-size: 29px;
+    }
+
+    .featured-release {
+        width: 100%;
+        padding: 18px 12px;
+    }
+
+    .spotify-player {
+        width: 100%;
+        min-width: 0;
+    }
+
+    footer {
+        padding: 25px 15px;
+    }
+}
+
+
+/* Apple Music release catalogue */
+#auto-music-catalogue {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+    justify-content: center;
+    gap: 24px;
+    margin-top: 25px;
+}
+
+#auto-music-catalogue .music-card {
+    width: 100%;
+    min-width: 0;
+}
+
+#auto-music-catalogue .music-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#auto-music-catalogue .music-card h4 {
+    font-size: 16px;
+    margin: 12px 0;
+    overflow-wrap: anywhere;
+}
+
+#auto-music-catalogue .music-card .button {
+    display: inline-block;
+    font-size: 12px;
+    padding: 10px 12px;
+    text-align: center;
+    max-width: 100%;
+}
+
+@media (max-width: 480px) {
+    #auto-music-catalogue {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+}
+
+
+/* SAJONZ artist homepage redesign */
+#home {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 8%;
+    background:
+        radial-gradient(ellipse at 80% 40%, #30230d 0%, transparent 45%),
+        #080808;
+    color: #ffffff;
+}
+
+#home .hero-text {
+    max-width: 700px;
+}
+
+#home .hero-text h1 {
+    font-size: clamp(42px, 8vw, 90px);
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#home .hero-text h1 span {
+    color: #d4af37;
+}
+
+#home .hero-text p {
+    max-width: 540px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #d0d0d0;
+}
+
+#home .hero-text .button,
+#home .hero-text a {
+    display: inline-block;
+    margin-top: 18px;
+}
+
+@media (max-width: 600px) {
+    #home {
+        min-height: 65vh;
+        padding: 55px 6%;
+    }
+
+    #home .hero-text h1 {
+        font-size: clamp(38px, 12vw, 58px);
+        letter-spacing: -1px;
+    }
+
+    #home .hero-text p {
+        font-size: 16px;
+    }
+}
+
+
+/* SAJONZ music catalogue polish */
+.music-section {
+    padding: 80px 7%;
+    background: #0b0b0b;
+    color: #ffffff;
+}
+
+.music-heading {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.music-heading h2 {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.music-heading h2,
+.music-eyebrow,
+.release-label {
+    color: #d4af37;
+}
+
+.featured-release {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: 35px;
+    padding: 30px;
+    border: 1px solid #302710;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #171717, #0b0b0b);
+}
+
+.release-info h3 {
+    font-size: clamp(26px, 4vw, 40px);
+    margin: 12px 0;
+}
+
+.spotify-player {
+    min-width: 0;
+    width: 100%;
+}
+
+#auto-music-catalogue {
+    margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+    .music-section {
+        padding: 55px 5%;
+    }
+
+    .featured-release {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 25px;
+    }
+}
+
+/* SAJONZ premium navigation */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(8, 8, 8, 0.96);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+    backdrop-filter: blur(12px);
+}
+
+header nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+header nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.25s ease;
+}
+
+header nav a:hover {
+    color: #d4af37;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+@media (max-width: 600px) {
+    header nav {
+        padding: 15px 4%;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav a {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+}
+
+/* SAJONZ professional About section */
+#about {
+    padding: 80px 8%;
+    background: #111111;
+    color: #ffffff;
+}
+
+#about h2 {
+    color: #d4af37;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+#about p {
+    max-width: 800px;
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+#about strong {
+    color: #d4af37;
+}
+
+@media (max-width: 600px) {
+    #about {
+        padding: 55px 6%;
+    }
+
+    #about p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+}
+
+/* SAJONZ signature contact design */
+#contact.contact-section {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 65px;
+    align-items: center;
+    padding: 90px 8%;
+    background: #080808;
+    color: #ffffff;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+#contact .contact-info {
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    text-align: left;
+}
+
+#contact .contact-info::before {
+    content: "ZGN";
+    display: block;
+    color: #242016;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    margin-bottom: 25px;
+}
+
+#contact .contact-info h2 {
+    font-size: clamp(48px, 6vw, 76px);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -2px;
+    margin: 0 0 25px;
+    text-transform: uppercase;
+}
+
+#contact .contact-info h2 span {
+    color: #d4af37;
+}
+
+#contact .contact-info p {
+    max-width: 380px;
+    margin: 15px 0 25px;
+    color: #bdbdbd;
+    line-height: 1.8;
+}
+
+#contact .contact-label {
+    color: #d4af37;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin: 25px 0 12px;
+}
+
+#contact .contact-email {
+    display: inline-block;
+    color: #ffffff;
+    font-size: clamp(15px, 1.7vw, 19px);
+    font-weight: 700;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+#contact .contact-email:hover {
+    color: #d4af37;
+}
+
+#contact .contact-info hr {
+    border: 0;
+    border-top: 1px solid #292929;
+    margin: 30px 0;
+}
+
+#contact .contact-socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+#contact .contact-socials a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: #bdbdbd;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+#contact .contact-socials a:hover {
+    color: #d4af37;
+}
+
+#contact .contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+    padding: 35px;
+    background: #111111;
+    border: 1px solid #302710;
+    border-radius: 8px;
+}
+
+#contact .contact-form label {
+    align-self: end;
+    color: #d4af37;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 16px;
+    border: 1px solid #292929;
+    border-radius: 5px;
+    background: #090909;
+    color: #ffffff;
+    font: inherit;
+    outline: none;
+}
+
+#contact .contact-form input::placeholder,
+#contact .contact-form textarea::placeholder {
+    color: #777777;
+}
+
+#contact .contact-form input:focus,
+#contact .contact-form textarea:focus {
+    border-color: #d4af37;
+}
+
+#contact .contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+#contact .contact-form button {
+    grid-column: 1 / -1;
+    margin-top: 12px;
+    padding: 18px;
+    border: 1px solid #d4af37;
+    border-radius: 5px;
+    background: #d4af37;
+    color: #080808;
+    font-weight: 900;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+#contact .contact-form button:hover {
+    background: transparent;
+    color: #d4af37;
+}
+
+@media (max-width: 750px) {
+    #contact.contact-section {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 40px;
+        padding: 60px 6%;
+    }
+
+    #contact .contact-info h2 {
+        font-size: clamp(46px, 11vw, 66px);
+    }
+
+    #contact .contact-form {
+        padding: 22px;
+    }
+}
+
+/* Professional Sajonz Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: #080808;
+    border-bottom: 1px solid #302710;
+    position: relative;
+    z-index: 1000;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    gap: 4px;
+}
+
+.brand-name {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.brand-dot {
+    color: #d4af37;
+}
+
+.brand-label {
+    color: #d4af37;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.main-nav a {
+    color: #eeeeee;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #d4af37;
+}
+
+/* Mobile header */
+@media (max-width: 750px) {
+    .site-header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 22px 5%;
+    }
+
+    .main-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px 20px;
+    }
+
+    .main-nav a {
+        font-size: 10px;
+    }
+}
+/* Mobile hero layout */
+@media (max-width: 750px) {
+    #home {
+        flex-direction: column;
+        text-align: center;
+        padding: 45px 6%;
+        gap: 30px;
+    }
+
+    #home h1 {
+        font-size: 48px;
+        letter-spacing: 5px;
+    }
+
+    #home h3 {
+        font-size: 22px;
+    }
+
+    #home .button {
+        display: inline-block;
+        margin: 6px 3px;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+    }
+}
+
+/* Professional mobile navigation */
+@media (max-width: 750px) {
+    .site-header {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px 5%;
+    }
+
+    .main-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 18px;
+        width: 100%;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding: 8px 0;
+    }
+}
+
+/* Premium header styling */
+.site-header {
+    background: #080808;
+    border-bottom: 1px solid rgba(214, 177, 94, 0.35);
+    padding: 20px 6%;
+}
+
+.brand {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.brand-name {
+    color: #d6b15e;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.brand-dot {
+    color: #ffffff;
+}
+
+.brand-label {
+    color: #aaaaaa;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.main-nav a {
+    color: #eeeeee;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #d6b15e;
+}
+/* PREMIUM MUSIC CATALOGUE */
+.music-section {
+    background: #0b0b0b;
+    padding: 80px 8%;
+    color: #ffffff;
+}
+
+.music-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.music-eyebrow,
+.release-label {
+    color: #d6b15e;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.music-heading h2 {
+    color: #d6b15e;
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.music-heading > p:last-child {
+    color: #bbbbbb;
+    line-height: 1.8;
+}
+
+.featured-release {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    background: linear-gradient(135deg, #17130b, #101010);
+    border: 1px solid rgba(214, 177, 94, 0.3);
+    border-radius: 14px;
+    padding: 35px;
+}
+
+.release-info h3 {
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.release-info > p:not(.release-label) {
+    color: #bbbbbb;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.spotify-player {
+    width: 100%;
+    min-width: 0;
+}
+
+.spotify-player iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.auto-catalogue {
+    margin-top: 65px;
+    text-align: center;
+}
+
+.auto-catalogue h3 {
+    color: #d6b15e;
+    font-size: 28px;
+}
+
+.auto-catalogue > p {
+    color: #bbbbbb;
+    margin-bottom: 25px;
+}
+
+#auto-music-catalogue {
+    margin-top: 30px;
+}
+
+/* Mobile layout */
+@media (max-width: 750px) {
+    .music-section {
+        padding: 55px 5%;
+    }
+
+    .music-heading h2 {
+        font-size: 32px;
+    }
+
+    .featured-release {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 22px;
+    }
+
+    .release-info h3 {
+        font-size: 25px;
+    }
+
+    .auto-catalogue {
+        margin-top: 45px;
+    }
+}
+/* Sajonz music artwork cards */
+#auto-music-catalogue .music-card {
+    background: #111;
+    border: 1px solid #3a2c12;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+#auto-music-catalogue .music-card:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+}
+
+#auto-music-catalogue .music-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+#auto-music-catalogue .music-card h4 {
+    color: #d4af37;
+    font-size: 16px;
+    margin: 10px 0;
+    overflow-wrap: anywhere;
+}
+
+#auto-music-catalogue .music-card .button {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 12px;
+}
+/* Sajonz contact form polish */
+#contact .contact-form {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+    transition: border-color 0.3s ease;
+}
+
+#contact .contact-form:hover {
+    border-color: #d4af37;
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea {
+    transition: border-color 0.25s ease,
+                background 0.25s ease;
+}
+
+#contact .contact-form input:focus,
+#contact .contact-form textarea:focus {
+    background: #101010;
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.12);
+}
+
+#contact .contact-email {
+    transition: color 0.25s ease;
+}
+.hero-socials {
+    display: flex;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.hero-socials a {
+    color: #d4af37;
+    font-size: 24px;
+    transition: 0.3s ease;
+}
+
+.hero-socials a:hover {
+    color: #ffffff;
+    transform: translateY(-4px);
+}
